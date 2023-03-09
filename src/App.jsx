@@ -13,7 +13,10 @@ import {SestaKompa, SedmaKompa} from './components/OstaleKompe';
 
 function App() {
   const jasnoSvima = true;
-  const podnaslov = jasnoSvima ? <h2>svima je jasno</h2> : <h2>nikome nije jasno</h2>
+  const podnaslov = jasnoSvima ? <h2>svima je jasno</h2> : <h2>nikome nije jasno</h2>;
+
+  const pozdravniFooter = jasnoSvima && <h2>pozdrav!!</h2>;
+  
   return (
    <div className='App'>
     <h1>Algebra</h1>
@@ -25,6 +28,7 @@ function App() {
     <PetaKompa />
     <SestaKompa />
     <SedmaKompa />
+    {pozdravniFooter}
     </div>
   );
 }
